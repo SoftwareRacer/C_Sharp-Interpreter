@@ -1,8 +1,8 @@
-﻿using DynamicExpresso.Parsing;
+﻿using Interpreter.Parsing;
 using System;
 using System.Linq.Expressions;
 
-namespace DynamicExpresso
+namespace Interpreter
 {
 	public static class LanguageConstants
 	{
@@ -27,9 +27,7 @@ namespace DynamicExpresso
             new ReferenceType(typeof(Guid))
         };
 
-		/// <summary>
-		/// Primitive types alias (string, int, ...)
-		/// </summary>
+		// Primitive types alias (string, int, ...)
 		public static readonly ReferenceType[] CSharpPrimitiveTypes = {
 						new ReferenceType("object", typeof(object)),
 						new ReferenceType("string", typeof(string)),
@@ -42,18 +40,14 @@ namespace DynamicExpresso
 						new ReferenceType("decimal", typeof(decimal))
 				};
 
-		/// <summary>
-		/// Common .NET Types (Math, Convert, Enumerable)
-		/// </summary>
+		// Common .NET Types (Math, Convert, Enumerable)
 		public static readonly ReferenceType[] CommonTypes = {
             new ReferenceType(typeof(Math)),
             new ReferenceType(typeof(Convert)),
             new ReferenceType(typeof(System.Linq.Enumerable))
         };
 
-		/// <summary>
-		/// true, false, null
-		/// </summary>
+		// true, false, null
 		public static readonly Identifier[] Literals = {
 					new Identifier("true", Expression.Constant(true)),
 					new Identifier("false", Expression.Constant(false)),
