@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('netstandard2')) ">
-    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.CSharp" Version="8.0.0" />
   </ItemGroup>
 
 </Project>
