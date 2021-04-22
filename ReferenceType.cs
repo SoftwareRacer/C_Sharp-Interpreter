@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using DynamicExpresso.Reflection;
+using interpreter.Reflection;
 
-namespace DynamicExpresso
+namespace Interpreter
 {
 	public class ReferenceType
 	{
 		public Type Type { get; private set; }
 
-		/// <summary>
-		/// Public name that must be used in the expression.
-		/// </summary>
+		// Public name that must be used in the expression.
 		public string Name { get; private set; }
 
 		public IList<MethodInfo> ExtensionMethods { get; private set; }
