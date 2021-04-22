@@ -1,10 +1,10 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyCompany("Davide Icardi")]
-[assembly: AssemblyProduct("Dynamic Expresso")]
-[assembly: AssemblyDescription("C# expression interpreter/evaluator. See https://github.com/davideicardi/DynamicExpresso.")]
-[assembly: AssemblyCopyright("Copyright © Davide Icardi 2015")]
+[assembly: AssemblyCompany("Marco Hennermann")]
+[assembly: AssemblyProduct("C#-Interpreter")]
+[assembly: AssemblyDescription("See https://github.com/SoftwareRacer/C_Sharp-Interpreter.")]
+[assembly: AssemblyCopyright("Copyright © Marco Hennermann 2021")]
 [assembly: ComVisible(false)]
-[assembly: AssemblyVersion("1.3.1.0")]
+[assembly: AssemblyVersion("1.4.0")]
 
