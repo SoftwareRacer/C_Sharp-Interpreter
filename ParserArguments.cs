@@ -1,12 +1,12 @@
-﻿using DynamicExpresso.Parsing;
+﻿using Interpretet.Parsing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-using DynamicExpresso.Exceptions;
+using Interpreter.Exceptions;
 
-namespace DynamicExpresso
+namespace Interpreter
 {
 	internal class ParserArguments
 	{
@@ -89,9 +89,7 @@ namespace DynamicExpresso
 			return false;
 		}
 
-		/// <summary>
-		/// Get the parameter and mark is as used.
-		/// </summary>
+		// Get the parameter and mark is as used.
 		public bool TryGetParameters(string name, out ParameterExpression expression)
 		{
 			Parameter parameter;
