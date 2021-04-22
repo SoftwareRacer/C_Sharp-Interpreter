@@ -2,19 +2,17 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net461;net45</TargetFrameworks>
-    <RootNamespace>DynamicExpresso</RootNamespace>
+    <RootNamespace>Interpreter</RootNamespace>
 
-    <Authors>Davide Icardi</Authors>
-    <Company>davideicardi.com</Company>
-    <Description>C# expression interpreter/evaluator</Description>
-    <Copyright>Davide Icardi</Copyright>
-    <PackageTags>dynamic expresso expression linq eval</PackageTags>
+    <Authors>Marco Hennermann</Authors>
+    <Description>C#-Interpreter</Description>
+    <Copyright>Marco Hennermann</Copyright>
+    <PackageTags>interpreter expression linq eval</PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <IncludeSymbols>True</IncludeSymbols>
     <IncludeSource>True</IncludeSource>
-    <PackageProjectUrl>https://github.com/davideicardi/DynamicExpresso</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/davideicardi/DynamicExpresso#license</PackageLicenseUrl>
-    <RepositoryUrl>https://github.com/davideicardi/DynamicExpresso.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/SoftwareRacer/C_Sharp-Interpreter</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/SoftwareRacer/C_Sharp-Interpreter.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <VersionPrefix>0.0.1</VersionPrefix>
     <VersionSuffix></VersionSuffix>
