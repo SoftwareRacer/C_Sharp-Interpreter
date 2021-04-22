@@ -4,7 +4,7 @@ using System.Security.Permissions;
 using System.Runtime.Serialization;
 #endif
 
-namespace DynamicExpresso.Exceptions
+namespace Interpreter.Exceptions
 {
 #if !NETSTANDARD1_6
 	[Serializable]
