@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-namespace DynamicExpresso
+namespace Interpreter
 {
-	/// <summary>
-	/// An expression parameter. This class is thread safe.
-	/// </summary>
+	// An expression parameter. This class is thread safe.
 	public class Parameter
 	{
 		public Parameter(string name, object value)
