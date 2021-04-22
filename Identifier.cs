@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-namespace DynamicExpresso
+namespace Interpreter
 {
 	public class Identifier
 	{
