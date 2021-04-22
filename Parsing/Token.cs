@@ -1,4 +1,4 @@
-﻿namespace DynamicExpresso.Parsing
+﻿namespace Interpreter.Parsing
 {
 	internal struct Token
 	{
