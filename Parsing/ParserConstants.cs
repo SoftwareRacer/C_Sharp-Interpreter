@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace DynamicExpresso.Parsing
+namespace Interpreter.Parsing
 {
 	internal static class ParserConstants
 	{
