@@ -1,6 +1,6 @@
 using System;
 
-namespace DynamicExpresso
+namespace Interpreter
 {
 	[Flags]
 	public enum AssignmentOperators
