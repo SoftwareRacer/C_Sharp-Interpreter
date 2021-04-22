@@ -5,7 +5,7 @@ namespace Interpreter.Exceptions
 #if !NETSTANDARD1_6
 	[Serializable]
 #endif
-	public class InterpreterException : Exception
+	public class InterpreterException : Exception //inherits exception
 	{
 		public InterpreterException() { }
 		public InterpreterException(string message) : base(message) { }
