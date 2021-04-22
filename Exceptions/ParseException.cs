@@ -3,14 +3,14 @@ using System;
 using System.Runtime.Serialization;
 using System.Security.Permissions;
 #endif
-using DynamicExpresso.Resources;
+using Interpreter.Resources;
 
-namespace DynamicExpresso.Exceptions
+namespace Interpreter.Exceptions
 {
 	#if !NETSTANDARD1_6
 	[Serializable]
 	#endif
-	public class ParseException : DynamicExpressoException
+	public class ParseException : InterpreterException
 	{
 		public ParseException(string message, int position)
 			: base(string.Format(ErrorMessages.Format, message, position)) 
