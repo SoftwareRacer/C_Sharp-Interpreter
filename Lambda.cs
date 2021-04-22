@@ -4,13 +4,11 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Runtime.ExceptionServices;
-using DynamicExpresso.Exceptions;
+using Interpreter.Exceptions;
 
-namespace DynamicExpresso
+namespace Interpreter
 {
-	/// <summary>
-	/// Represents a lambda expression that can be invoked. This class is thread safe.
-	/// </summary>
+	// Represents a lambda expression that can be invoked. This class is thread safe.
 	public class Lambda
 	{
 		private readonly Expression _expression;
@@ -38,22 +36,13 @@ namespace DynamicExpresso
 		public string ExpressionText { get { return _parserArguments.ExpressionText; } }
 		public Type ReturnType { get { return _delegate.Method.ReturnType; } }
 
-		/// <summary>
-		/// Gets the parameters actually used in the expression parsed.
-		/// </summary>
-		/// <value>The used parameters.</value>
+		// Gets the parameters actually used in the expression parsed.
 		[Obsolete("Use UsedParameters or DeclaredParameters")]
 		public IEnumerable<Parameter> Parameters { get { return _parserArguments.UsedParameters; } }
 
-		/// <summary>
-		/// Gets the parameters actually used in the expression parsed.
-		/// </summary>
-		/// <value>The used parameters.</value>
+		// Gets the parameters actually used in the expression parsed.
 		public IEnumerable<Parameter> UsedParameters { get { return _parserArguments.UsedParameters; } }
-		/// <summary>
-		/// Gets the parameters declared when parsing the expression.
-		/// </summary>
-		/// <value>The declared parameters.</value>
+		// Gets the parameters declared when parsing the expression.
 		public IEnumerable<Parameter> DeclaredParameters { get { return _parserArguments.DeclaredParameters; } }
 
 		public IEnumerable<ReferenceType> Types { get { return _parserArguments.UsedTypes; } }
@@ -80,11 +69,7 @@ namespace DynamicExpresso
 			return InvokeWithUsedParameters(args);
 		}
 
-		/// <summary>
-		/// Invoke the expression with the given parameters values.
-		/// </summary>
-		/// <param name="args">Order of parameters must be the same of the parameters used during parse (DeclaredParameters).</param>
-		/// <returns></returns>
+		// Invoke the expression with the given parameters values.
 		public object Invoke(params object[] args)
 		{
 			var parameters = new List<Parameter>();
@@ -129,10 +114,7 @@ namespace DynamicExpresso
 			return ExpressionText;
 		}
 
-		/// <summary>
-		/// Generate the given delegate by compiling the lambda expression.
-		/// </summary>
-		/// <typeparam name="TDelegate">The delegate to generate. Delegate parameters must match the one defined when creating the expression, see UsedParameters.</typeparam>
+		// Generate the given delegate by compiling the lambda expression.
 		public TDelegate Compile<TDelegate>()
 		{
 			var lambdaExpression = LambdaExpression<TDelegate>();
@@ -146,11 +128,7 @@ namespace DynamicExpresso
 			return lambdaExpression.Compile();
 		}
 
-		/// <summary>
-		/// Generate a lambda expression.
-		/// </summary>
-		/// <returns>The lambda expression.</returns>
-		/// <typeparam name="TDelegate">The delegate to generate. Delegate parameters must match the one defined when creating the expression, see UsedParameters.</typeparam>
+		// Generate a lambda expression.
 		public Expression<TDelegate> LambdaExpression<TDelegate>()
 		{
 			return Expression.Lambda<TDelegate>(_expression, DeclaredParameters.Select(p => p.Expression).ToArray());
