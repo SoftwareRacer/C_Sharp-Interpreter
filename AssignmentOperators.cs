@@ -1,21 +1,15 @@
-﻿using System;
+using System;
 
 namespace DynamicExpresso
 {
 	[Flags]
 	public enum AssignmentOperators
 	{
-		/// <summary>
-		/// Disable all the assignment operators
-		/// </summary>
+		// Disable all the assignment operators
 		None = 0,
-		/// <summary>
-		/// Enable the assignment equal operator
-		/// </summary>
+		// Enable the assignment equal operator
 		AssignmentEqual = 1,
-		/// <summary>
-		/// Enable all assignment operators
-		/// </summary>
+		// Enable all assignment operators
 		All = AssignmentEqual
 	}
 }
