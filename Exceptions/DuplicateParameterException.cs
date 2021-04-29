@@ -9,7 +9,7 @@ namespace Interpreter.Exceptions
 #if !NETSTANDARD1_6
 	[Serializable]
 #endif
-	public class DuplicateParameterException : DynamicExpressoException
+	public class DuplicateParameterException : InterpreterException
 	{
 		public DuplicateParameterException(string identifier)
 			: base(string.Format("The parameter '{0}' was defined more than once", identifier)) 
