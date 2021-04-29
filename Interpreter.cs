@@ -1,6 +1,6 @@
-﻿using DynamicExpresso.Parsing;
-using DynamicExpresso.Reflection;
-using DynamicExpresso.Visitors;
+﻿using Interpreter.Parsing;
+using Interpreter.Reflection;
+using Interpreter.Visitors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
